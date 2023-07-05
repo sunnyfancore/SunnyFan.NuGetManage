@@ -12,7 +12,7 @@ namespace SunnyFan.NuGetManage.Models
     [Serializable]
     public class PackSourceModel
     {
-        string savePath { get { return Path.Combine(AppContext.BaseDirectory, "packagesource.bin"); } }
+        string savePath { get { return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "packagesource.bin"); } }
 
         List<PackSourceModel> packageSources = new List<PackSourceModel>();
         public PackSourceModel()
